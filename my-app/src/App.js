@@ -18,14 +18,15 @@ const useAnalyticsEventTracker = (category="Blog category") => {
 const App = () => {
   const gaEventTracker = useAnalyticsEventTracker('A Button Clicks')
   return (
-    <div className="App">
-      <Button variant="contained">
-        <a href="#" onClick={() => gaEventTracker}>A - Click Me!</a>
-      </Button>
-      <Button>B - Click Me!</Button>
-      <Button variant="contained">C - Click Me!</Button>
-    </div>
-  );
+    <div>
+    <h3>Contact Us</h3>
+     <div> 
+       <a href="#" onClick={()=>gaEventTracker('call')}>Call Us</a>
+      </div>
+     <div>
+       <a href="mailto:someone@example.com" onClick={()=>gaEventTracker('email')}>Write to us</a>
+      </div>
+  </div>);
 }
 
 export default App;
