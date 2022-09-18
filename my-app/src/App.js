@@ -19,17 +19,11 @@ const App = () => {
   const gaEventTracker = useAnalyticsEventTracker('Clicks To My Site')
   return (
     <div>
-    <h3>Contact Us</h3>
-     <div> 
-       <a href="#" onClick={()=>gaEventTracker('call')}>Call Us</a>
-      </div>
-     <div>
-       <a href="mailto:someone@example.com" onClick={()=>gaEventTracker('email')}>Write to us</a>
-      </div>
-     <div>
       <Button onClick={() => gaEventTracker('The A Button')}>A - Click Me!</Button>
-     </div>
-  </div>);
+      <Button onClick={() => gaEventTracker('The B Button')}>B - Click Me!</Button>
+      <Button onClick={() => gaEventTracker('The C Button')}>C - Click Me!</Button>
+    </div>
+  );
 }
 
 export default App;
